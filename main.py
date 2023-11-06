@@ -29,5 +29,11 @@ if st.button('Predict'):
 
     # Make predictions using the loaded model
     predicted_class = trained_model.predict(input_features_array)
+    if (predicted_class[0]==0):
+        return 'The Person will die'
+    else:
+        return 'The Person will Survive'
 
-    st.write(f"Predicted class: {predicted_class[0]}")
+
+
+    #st.write(f"Predicted class: {predicted_class[0]}")
